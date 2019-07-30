@@ -66,15 +66,6 @@ button:hover {
 	    "ftr ftr";
 	}
 }
-
-
-/* 
-header + footer rgb(209, 59, 50)
-article tl rgb(186 53 46)
-article tr rgb(197, 55, 47)
-article bl rgb( 175, 50, 42)
-article br rgb(186, 53, 46)
-*/
   
   header {
     grid-area: hdr;
