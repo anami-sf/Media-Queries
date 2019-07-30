@@ -33,68 +33,80 @@ button:hover {
     transform: scale(1.1);
 } */ 
 
-/* 
-header rgb(209, 59, 50)
-article tl rgb(186 53 46)
-article tr rgb(197, 55, 47)
-article bl rgb( 175, 50, 42)
-article br rgb(186, 53, 46)
-
-*/
-
 * {
     box-sizing: border-box;
   }
   
   body {
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0;
     font-family: Helvetica;
     display: grid;
     /* mobile first - single column */
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 30px auto 100px;
+    grid-template-rows: 15vmin 80vmin 80vmin 80vmin 80vmin 15vmin;
     grid-template-areas: 
       "hdr"
-      "ftr"
-      "content"
-      "side";
+      "article1"
+      "article2"
+      "article3"
+      "article4"
+      "ftr";
   }
 
-  @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 	body {
 	  /* tablet - two column display */
 	  grid-template-columns: 2fr 2fr;
-	  grid-template-rows: 50px auto 30px;
+	  grid-template-rows: 15vmin 80vmin 80vmin 15vmin;
 	  grid-template-areas: 
 	    "hdr hdr"
-	    "article1 article2"
+      "article1 article2"
+      "article3 article4"
 	    "ftr ftr";
 	}
 }
 
+
+/* 
+header + footer rgb(209, 59, 50)
+article tl rgb(186 53 46)
+article tr rgb(197, 55, 47)
+article bl rgb( 175, 50, 42)
+article br rgb(186, 53, 46)
+*/
   
   header {
     grid-area: hdr;
-    background-color: #ff9e7a;
+    background-color: rgb(209, 59, 50);
   }
   
-  .article1 {
+  #article1 {
     grid-area: article1;
-    background-color: #ffe07a;
+    background-color: rgb(186 53 46);
   }
   
-  .article2 {
+  #article2 {
     grid-area: article2;
-    background-color: #bf9df7;
+    background-color: rgb(197, 55, 47);
+  }
+
+  #article3 {
+    grid-area: article3;
+    background-color: rgb( 175, 50, 42);
+  }
+
+  #article4 {
+    grid-area: article4;
+    background-color: rgb(186 53 46);
   }
 
   footer {
     grid-area: ftr;
-    background-color: #b1fcc8;
+    background-color: rgb(209, 59, 50);
   }
   
-  header, .article1, .article2, footer {
+  header, article, footer {
     display: flex;
     justify-content: center;
     align-items: center;
